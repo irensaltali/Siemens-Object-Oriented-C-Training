@@ -1,15 +1,19 @@
+#include <iostream>
 #pragma once
-class Animal
-{
-public:
-	Animal();
-	~Animal();
-};
 
 class Animal
 {
+private:
+	std::string name;
+	int hunger;
 public:
 	Animal();
-	~Animal();
+	Animal(std::string);
+	 ~Animal();
+	 std::string getName();
+	 void feed(int);
 };
+
+
+
 
