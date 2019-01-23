@@ -2,11 +2,14 @@
 //
 
 #include "pch.h"
+#include "Animal.h"
 #include <iostream>
 
 int main()
 {
     std::cout << "Hello World!\n"; 
+
+	Animal animal;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
