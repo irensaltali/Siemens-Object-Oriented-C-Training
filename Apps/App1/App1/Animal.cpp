@@ -10,6 +10,7 @@ Animal::Animal()
 
 Animal::Animal(std::string n)
 {
+	std::cout << "Animal\n";
 	this->name = n;
 	this->hunger = 0;
 }
