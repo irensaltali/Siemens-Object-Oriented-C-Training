@@ -1,5 +1,7 @@
-#pragma once
+﻿#pragma once
 #include "Animal.h"
+
+//Header File - Bu sınıf Animal sınıfından miras alıyor.
 class Dog : public Animal
 {
 public:
@@ -8,6 +10,6 @@ public:
 	~Dog();
 
 	//Hareket Durumu
-	void move(int);
+	void move(int); // Move isimli fonksiyon
 };
 
