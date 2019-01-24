@@ -85,18 +85,39 @@ void loopInLoopBreak(int a, int b) {
 	}
 }
 
+void rageBasedFor() {
+	int mahmut[10] = { 1, 2, 3, 4,5,6,7,8,9,10 };
+	// Triple the value of each element in the array.
+	for (int& x : mahmut) {
+		x *= 3;
+		std::cout << x << "\n";
+	}
+}
+
+void continueFunc() {
+
+	for (int i = 0; i < 10; i++) {
+		if (i % 2 == 0)
+			continue;
+		std::cout << i << "\n";
+	}
+
+}
+
 int main()
 {
-	int a, b;
+	/*int a, b;
 	std::cout << "Baslangic sayisini giriniz:";
 	std::cin >> a;
 	std::cout << "Bitis sayisini giriniz:";
-	std::cin >> b;
+	std::cin >> b;*/
 
 	//ifFunction(a);
 	//switchFunction(a);
 	//whileFunction();
 	//forFunction(a, b);
 	//loopBreakFunc(a, b);
-	loopInLoopBreak(a, b);
+	//loopInLoopBreak(a, b);
+	//rageBasedFor();
+	continueFunc();
 }
