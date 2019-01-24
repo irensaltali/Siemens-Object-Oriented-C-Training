@@ -106,18 +106,18 @@ void continueFunc() {
 
 int main()
 {
-	/*int a, b;
+	int a, b;
 	std::cout << "Baslangic sayisini giriniz:";
 	std::cin >> a;
 	std::cout << "Bitis sayisini giriniz:";
-	std::cin >> b;*/
+	std::cin >> b;
 
-	//ifFunction(a);
-	//switchFunction(a);
-	//whileFunction();
-	//forFunction(a, b);
-	//loopBreakFunc(a, b);
-	//loopInLoopBreak(a, b);
-	//rageBasedFor();
+	ifFunction(a);
+	switchFunction(a);
+	whileFunction();
+	forFunction(a, b);
+	loopBreakFunc(a, b);
+	loopInLoopBreak(a, b);
+	rageBasedFor();
 	continueFunc();
 }
