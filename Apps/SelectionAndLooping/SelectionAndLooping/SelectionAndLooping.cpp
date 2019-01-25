@@ -5,9 +5,8 @@
 #include <iostream>
 
 void ifFunction(int x) {
-	if (x == 6) {
+	if (x == 6) 
 		std::cout << "Uyanma vakti.";
-	}
 	else if (x < 6) {
 		std::cout << "Uyumaya devam. Kesin tuvaletim gelmistir.";
 	}
@@ -41,6 +40,15 @@ void switchFunction(int nott) {
 void whileFunction() {
 	int nott;
 
+	std::cout << "Not giriniz: ";
+	std::cin >> nott;
+
+	while (nott != 0) {
+		switchFunction(nott);
+		std::cout << "Not giriniz: ";
+		std::cin >> nott;
+	}
+	
 	do {
 		std::cout << "Not giriniz: ";
 		std::cin >> nott;
@@ -112,12 +120,12 @@ int main()
 	std::cout << "Bitis sayisini giriniz:";
 	std::cin >> b;
 
-	ifFunction(a);
+	//ifFunction(a);
 	switchFunction(a);
-	whileFunction();
-	forFunction(a, b);
-	loopBreakFunc(a, b);
-	loopInLoopBreak(a, b);
-	rageBasedFor();
-	continueFunc();
+	//whileFunction();
+	//forFunction(a, b);
+	//loopBreakFunc(a, b);
+	//loopInLoopBreak(a, b);
+	//rageBasedFor();
+	//continueFunc();
 }

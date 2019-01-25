@@ -12,8 +12,8 @@ void passByReference(int& c);
 
 int main()
 {
-	//std::cout << isOdd(4); 
-	//scope();
+	std::cout << isOdd(4); 
+	scope();
 	int a = 7;
 	std::cout << "Adres a:" << &a << "\n";
 	passByValue(a);
@@ -26,6 +26,7 @@ int main()
 bool isOdd(int x) {
 	return x % 2;
 }
+
 void scope() {
 	char b = 'a';
 	while (x < 5) {
