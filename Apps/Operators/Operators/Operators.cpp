@@ -12,11 +12,28 @@ void arithmeticLeftShift() {
 	std::cout << c;
 }
 
+void arithmeticRightShift() {
+	int a = 3;
+	int b = 4;
+	int c = a >> b;
+
+	std::cout << c;
+}
+
 void bitwiseANDAssignment() {
 	int a = 10;
 	int b = 6;
 
 	a &= b;
+
+	std::cout << "a:" << a << " b: " << b << "\n";
+}
+
+void bitwiseORAssignment() {
+	int a = 10;
+	int b = 6;
+
+	a |= b;
 
 	std::cout << "a:" << a << " b: " << b << "\n";
 }
@@ -77,7 +94,9 @@ void orderOfOperations() {
 int main()
 {
 	arithmeticLeftShift();
+	arithmeticRightShift();
 	bitwiseANDAssignment();
+	bitwiseORAssignment();
 	logicalAND();
 	logicalANDwithIf();
 	ternaryConditional();
