@@ -13,6 +13,8 @@ public:
 	~Person() {
 		std::cout << "~Person()\n";
 	}
+	int x;
+	double  y;
 };
 
 void FuncitonOverloading();
@@ -24,13 +26,17 @@ int main()
 	//FuncitonOverloading();
 	//Recursive();
 
-	std::cout << "Before new \n";
+	/*std::cout << "Before new \n";
 	Person* person = new Person();
 
 
 	std::cout << "Before delete \n";
-	delete person;
+	delete person;*/
 
+	Person a[7];
+	std::cout << " size of array: " << sizeof(a) << "\n";
+	std::cout << " size of element: " << sizeof(*a) << "\n";
+	std::cout << "Length of array = " << (sizeof(a) / sizeof(*a)) << std::endl;
 }
 
 
