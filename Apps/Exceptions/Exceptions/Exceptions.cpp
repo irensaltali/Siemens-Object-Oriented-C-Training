@@ -25,8 +25,29 @@ int main()
 {
 	try {
 		func1();
+		cout << "try" << std::endl;
 	}
-	catch(...){
+	catch (...) {
 		cout << "HATA";
 	}
+	cout << "main" << std::endl;
 }
+
+//ÇÖZÜM
+//24
+//25
+//26
+//27
+//19
+//20
+//14
+//15
+//9
+//10
+//15
+//20
+//27
+//30
+//31 HATA
+//32
+//34 main
