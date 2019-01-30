@@ -35,7 +35,7 @@ public:
 		}
 		return sonuc;
 	}
-	
+
 	bool sutunKontrol(int sayi, int sutun) {
 		bool sonuc = false;
 		for (int i = 0; i < 9; i++) {
@@ -63,6 +63,15 @@ public:
 			}
 		}
 		return sonuc;
+	}
+
+	bool bittiMi() {
+		for (int i = 0; i < 9; i++) {
+			for (int j = 0; j < 9; j++) {
+				if (matrix[i][j] == 0)
+					return false;
+			}
+		}
 	}
 
 	void sayiGir(int sayi, int satir, int sutun) {
@@ -101,6 +110,7 @@ int main()
 		cout << "Oyunu bitirmek icin -1 giriniz." << endl;
 		cout << "Yazdirmak icin 1 giriniz." << endl;
 		cout << "Sayi girmek icin 2'ye basin. " << endl;
+		cout << "Bitt mi? (3) " << endl;
 		cin >> x;
 
 
@@ -117,8 +127,14 @@ int main()
 			cout << "Girmek istediginiz sutun:";
 			cin >> sutun;
 
-			sudoku.sayiGir(sayi, satir-1, sutun-1);
+			sudoku.sayiGir(sayi, satir - 1, sutun - 1);
 		}
-		
-	} while (x>0);
+		if (x == 3) {
+			if (sudoku.bittiMi())
+				cout << "Tebrikler." << endl;
+			else
+				cout << "Bitmedi." << endl;
+		}
+
+	} while (x > 0);
 }
