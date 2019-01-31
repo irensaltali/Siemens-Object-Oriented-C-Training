@@ -80,6 +80,34 @@ public:
 			yazdir();
 		}
 	}
+
+	void coz() {
+		bool lock = true;
+		do {
+			lock = true;
+			for (int i = 0; i < 9; i++) {
+				for (int j = 0; j < 9; j++) {
+					int holder = 0;
+					if (matrix[i][j] == 0) {
+						for (int sayi = 1; sayi <= 9; sayi++) {
+							if (!satirKontrol(sayi, i) && !sutunKontrol(sayi, j) && !kutuKontrol(sayi, i, j)) {
+								if (holder == 0) {
+									holder = sayi;
+								}
+								else {
+									break;
+								}
+							}
+						}
+						if (holder != 0)
+							matrix[i][j] == holder;
+					}
+				}
+			}
+		} while (!lock);
+
+		yazdir();
+	}
 private:
 	int matrix[9][9] = {
 		{9,0,0,5,0,0,0,0,0},
@@ -111,6 +139,7 @@ int main()
 		cout << "Yazdirmak icin 1 giriniz." << endl;
 		cout << "Sayi girmek icin 2'ye basin. " << endl;
 		cout << "Bitt mi? (3) " << endl;
+		cout << "Coz. (4) " << endl;
 		cin >> x;
 
 
@@ -134,6 +163,9 @@ int main()
 				cout << "Tebrikler." << endl;
 			else
 				cout << "Bitmedi." << endl;
+		}
+		if (x == 4) {
+			sudoku.coz();
 		}
 
 	} while (x > 0);
